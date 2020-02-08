@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Alignment")]
 public class AlignmentBehavior : FilterFlockBehavior {
-    //对齐行动
+    //一致性：即群体成员的的移动方向要同整体的移动方向保持一致
     
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock) {
         //如果附近没有neighbors的话, 保持现有的状态

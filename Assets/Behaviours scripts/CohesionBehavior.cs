@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Cohesion")]
 public class CohesionBehavior : FilterFlockBehavior {   
-    //协同运动
+    //聚合性：即群体的成员向群体成员整体的平均位置靠近，使群体的整体寻路前进效果更真实。
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock) {
         //如果附近没有neighbors的话, 原地不动

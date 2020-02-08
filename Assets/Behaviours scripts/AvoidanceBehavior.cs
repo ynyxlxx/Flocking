@@ -4,14 +4,13 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Avoidance")]
 public class AvoidanceBehavior : FilterFlockBehavior {
-    //避免行为 ———— 避免相距过近
+    //分离性：即每个群体成员需要与其他成员保持一定距离，避免重合在一起
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock) {
         //如果附近没有neighbors的话, 原地不动
         if (context.Count == 0)
             return Vector2.zero;
 
-        //如果存在neighbors的话，求附近所有neighbors的质心(中心点)位置
         Vector2 avoidanceMove = Vector2.zero;
         int nAvoid = 0;
         List<Transform> filterContext = (contextFilter == null) ? context : contextFilter.Filter(agent, context);
