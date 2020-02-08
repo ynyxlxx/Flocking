@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Steered Cohesion")]
 public class SteeredCohesionBehavior : FilterFlockBehavior {
-    //平滑版本的协同运动
+    //聚合性：即群体的成员向群体成员整体的平均位置靠近，使群体的整体寻路前进效果更真实。
 
     private Vector2 currentVelocity;
     public float agentSmoothTime = 0.5f;
